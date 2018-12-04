@@ -22,7 +22,7 @@ pipeline {
 
         stage ('Build') {
             steps {
-               bat 'cd task-manager-service'
+               bat 'cd task-manager-service && mvn package docker:build'
             }
         }
     }
